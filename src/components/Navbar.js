@@ -82,15 +82,15 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* <Nav.Item>
+            <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/capstone"
+                to="/Contact"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineDesktop style={{ marginBottom: "2px" }} /> Capstone
+                <AiOutlineDesktop style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
-            </Nav.Item> */}
+            </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
