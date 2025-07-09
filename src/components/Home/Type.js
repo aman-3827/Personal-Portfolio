@@ -7,8 +7,8 @@ function Type() {
       options={{
         strings: [
           "Web Developer",
+          "WrodPress Developer",
           "Web Designer",
-          "Web Analytics Specialist",
         ],
         autoStart: true,
         loop: true,
