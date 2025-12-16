@@ -741,3 +741,42 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+
+/*changes*/ 
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.contact-inner {
+  padding: 80px 15px;
+}
+
+.contact-heading {
+  font-size: 2.3rem;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.contact-img {
+  max-width: 100%;
+}
+
+/* Mobile fixes */
+@media (max-width: 768px) {
+  .about-section {
+    align-items: flex-start;
+  }
+
+  .contact-inner {
+    padding: 60px 15px;
+  }
+
+  .contact-heading {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}

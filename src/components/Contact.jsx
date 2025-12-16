@@ -14,19 +14,18 @@ function Contact() {
     e.preventDefault();
     setLoading(true);
 
-    const serviceId = "service_ih8axqf";
-    const templateId = "template_0yoki5s";
-    const publicKey = "q-cbCQKsjxD6F6ajI";
-
-    const templateParams = {
-      yourname,
-      email,
-      message,
-      to_name: "Aman Kumar",
-    };
-
     emailjs
-      .send(serviceId, templateId, templateParams, publicKey)
+      .send(
+        "service_ih8axqf",
+        "template_0yoki5s",
+        {
+          yourname,
+          email,
+          message,
+          to_name: "Aman Kumar",
+        },
+        "q-cbCQKsjxD6F6ajI"
+      )
       .then(() => {
         alert("Message sent successfully!");
         setName("");
@@ -42,110 +41,72 @@ function Contact() {
   };
 
   return (
-    <Container fluid className="about-section" style={{ position: "relative", zIndex: 0 }}>
+    <Container fluid className="about-section">
       <Particle />
-      <Container>
-        <Row style={{ justifyContent: "center", padding: "150px" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
-              position: "relative",
-              zIndex: 2,
-            }}
-          >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px", color: "white" }}>
-              Let's Start a <strong className="purple">Conversation</strong>
+
+      {/* Inner container handles spacing */}
+      <Container className="contact-inner">
+        <Row className="align-items-center gx-5 gy-5">
+          {/* FORM */}
+          <Col lg={6} md={12} style={{ zIndex: 2 }}>
+            <h1 className="contact-heading">
+              Let's Start a <span className="purple">Conversation</span>
             </h1>
 
-            <form onSubmit={handleSubmit} style={{ marginBottom: "30px" }}>
-              {/* Name */}
-              <div className="mb-3" style={{ textAlign: "left" }}>
-                <label htmlFor="yourname" style={{ color: "white" }}>
-                  <strong className="purple">Name</strong>
-                </label>
+            <form onSubmit={handleSubmit}>
+              <div className="mb-4">
+                <label className="text-white">Name</label>
                 <input
                   type="text"
-                  id="yourname"
-                  placeholder="Enter your name"
                   value={yourname}
                   onChange={(e) => setName(e.target.value)}
+                  placeholder="Enter your name"
                   style={inputStyle}
                   required
                 />
               </div>
 
-              {/* Email */}
-              <div className="mb-3" style={{ textAlign: "left" }}>
-                <label htmlFor="email" style={{ color: "white" }}>
-                  <strong className="purple">Email</strong>
-                </label>
+              <div className="mb-4">
+                <label className="text-white">Email</label>
                 <input
                   type="email"
-                  id="email"
-                  placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
                   style={inputStyle}
                   required
                 />
               </div>
 
-              {/* Message */}
-              <div className="mb-3" style={{ textAlign: "left" }}>
-                <label htmlFor="message" style={{ color: "white" }}>
-                  <strong className="purple">Message</strong>
-                </label>
+              <div className="mb-4">
+                <label className="text-white">Message</label>
                 <textarea
-                  id="message"
-                  rows="4"
-                  placeholder="Type your message here..."
+                  rows="5"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Type your message here..."
                   style={{ ...inputStyle, resize: "none" }}
                   required
-                ></textarea>
+                />
               </div>
 
-              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={loading}
-                style={{
-                  backgroundColor: "#6f42c1",
-                  border: "none",
-                  borderRadius: "5px",
-                  padding: "10px 20px",
-                  color: "white",
-                  fontWeight: "bold",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  cursor: loading ? "not-allowed" : "pointer",
-                  opacity: loading ? 0.7 : 1,
-                }}
+                style={submitStyle(loading)}
               >
-                {loading && (
-                  <span
-                    className="spinner-border spinner-border-sm"
-                    role="status"
-                    aria-hidden="true"
-                    style={{ color: "white" }}
-                  ></span>
-                )}
                 {loading ? "Sending..." : "Submit"}
               </button>
             </form>
           </Col>
 
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px", zIndex: 1 }}
-            className="about-img"
-          >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+          {/* IMAGE */}
+          <Col lg={5} md={12} className="text-center">
+            <img
+              src={laptopImg}
+              alt="about"
+              className="img-fluid contact-img"
+            />
           </Col>
         </Row>
       </Container>
@@ -155,14 +116,23 @@ function Contact() {
 
 const inputStyle = {
   width: "100%",
-  color: "black",
-  border: "2.5px solid #6f42c1",
-  borderRadius: "9px",
-  padding: "10px",
+  padding: "14px",
+  fontSize: "16px",
+  borderRadius: "10px",
+  border: "2px solid #6f42c1",
   outline: "none",
-  fontSize: "15px",
-  zIndex: 2,
-  position: "relative",
 };
+
+const submitStyle = (loading) => ({
+  backgroundColor: "#6f42c1",
+  border: "none",
+  borderRadius: "6px",
+  padding: "12px 28px",
+  color: "white",
+  fontSize: "16px",
+  fontWeight: "600",
+  cursor: loading ? "not-allowed" : "pointer",
+  opacity: loading ? 0.8 : 1,
+});
 
 export default Contact;
