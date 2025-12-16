@@ -50,7 +50,7 @@ function About() {
               <span style={{ display: "inline-block", verticalAlign: "middle" }}>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; College : Govind Ballabh Pant Institute of Engineering<br></br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Year : 2021 - 2025<br></br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CGPA = 6.53 (upto 6th Sem)
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CGPA = 7.20
               </span>
             </li>
             <br></br>
@@ -72,7 +72,7 @@ function About() {
               <span style={{ display: "inline-block", verticalAlign: "middle" }}>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; School : Shri Guru Ram Rai<br></br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Year : 2012 - 2019<br></br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Percentage = 83%
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Percentage = 82%
               </span>
             </li>
           </ul>

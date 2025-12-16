@@ -45,7 +45,7 @@ function Contact() {
     <Container fluid className="about-section" style={{ position: "relative", zIndex: 0 }}>
       <Particle />
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
+        <Row style={{ justifyContent: "center", padding: "150px"}}>
           <Col
             md={7}
             style={{
@@ -147,6 +147,8 @@ function Contact() {
           >
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
+
+          
         </Row>
       </Container>
     </Container>
