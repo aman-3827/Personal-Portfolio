@@ -14,6 +14,10 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// App.js mein check karo
+const isMobile = window.innerWidth <= 1024;
+
+
 function App() {
   const [load, upadateLoad] = useState(true);
 
@@ -27,6 +31,12 @@ function App() {
   return (
     <Router>
       <Preloader load={load} />
+      <div className="App">
+      {/* Agar mobile nahi hai tabhi cursor dikhao */}
+      {!isMobile && <CustomCursor />} 
+      <Navbar />
+      {/* ... baaki routes */}
+    </div>
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <CustomCursor />
         <Navbar />
