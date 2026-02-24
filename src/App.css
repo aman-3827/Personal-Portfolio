@@ -29,27 +29,23 @@
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
-/* Box ko safe rakhne ke liye base style */
+
+/* Box icons base style */
 .tech-icons {
   position: relative !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   transition: all 0.3s ease-in-out !important;
-  /* Agar purana box style chahiye toh border/padding yahan rehne dena */
 }
 
-/* Text ko shuru mein hide karne ke liye */
+/* Text visibility on hover */
 .tech-name {
-  display: block; /* Isse text niche hi rahega */
-  opacity: 0;     /* Shuru mein gayab */
+  display: block;
+  opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
   color: white;
@@ -58,15 +54,28 @@
   font-size: 1.1rem;
 }
 
-/* Jab wrapper (Col) pe hover ho, tab text dikhe */
 .tech-wrapper:hover .tech-name {
   opacity: 1;
   visibility: visible;
-  transform: translateY(5px); /* Thoda niche slide hone ka effect */
+  transform: translateY(5px);
 }
 
-/* Hover pe icon ko thoda highlight karne ke liye (Optional) */
 .tech-wrapper:hover .tech-icons {
   transform: scale(1.05);
-  border-color: #cd5ff8 !important; /* Agar border hai toh uska color change hoga */
+  border-color: #cd5ff8 !important;
+}
+
+/* Purana sara scroll wala code hata dena pehle */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* Native scrolling use karo, force smooth mat karo agar lag ho raha hai */
+  overflow-x: hidden;
+}
+
+/* Cursor ko cutne se bachane ke liye */
+.App {
+  position: relative;
+  min-height: 100vh;
 }

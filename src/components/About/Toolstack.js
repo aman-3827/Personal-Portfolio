@@ -1,19 +1,17 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-// Sirf wahi icons import kiye hain jo niche use ho rahe hain
-import {
-  SiGitlab,
-  SiVisualstudiocode,
-  SiGithub,
-  SiAtom,
+// Safe and stable imports
+import { 
+  SiGitlab, 
+  SiGithub, 
   SiGit,
 } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc"; // VS Code ke liye sabse best aur error-free icon
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       
-      {/* GitHub */}
       <Col xs={4} md={2} className="tech-wrapper">
         <div className="tech-icons">
           <SiGithub />
@@ -21,7 +19,6 @@ function Toolstack() {
         <span className="tech-name">GitHub</span>
       </Col>
 
-      {/* GitLab */}
       <Col xs={4} md={2} className="tech-wrapper">
         <div className="tech-icons">
           <SiGitlab />
@@ -29,23 +26,14 @@ function Toolstack() {
         <span className="tech-name">GitLab</span>
       </Col>
 
-      {/* VS Code */}
       <Col xs={4} md={2} className="tech-wrapper">
         <div className="tech-icons">
-          <SiVisualstudiocode />
+          <VscVscode />
         </div>
         <span className="tech-name">VS Code</span>
       </Col>
 
-      {/* Atom */}
-      <Col xs={4} md={2} className="tech-wrapper">
-        <div className="tech-icons">
-          <SiAtom />
-        </div>
-        <span className="tech-name">Atom</span>
-      </Col>
 
-      {/* Git */}
       <Col xs={4} md={2} className="tech-wrapper">
         <div className="tech-icons">
           <SiGit />
