@@ -1,134 +1,76 @@
+/* App.css - Clean & Stable Version */
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  position: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* Box icons base style */
-.tech-icons {
-  position: relative !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+/* --- 1. Navbar Fix (Dark & Premium) --- */
+/* --- Navbar Fix: Perfect Glassy Balance --- */
+.navbar, .sticky {
+  /* 0.7 opacity se piche ka purple background halka dikhega */
+  background-color: rgba(10, 4, 22, 0.7) !important; 
+  
+  /* Blur ko 15px se 20px kiya taaki piche ka content "frosted glass" jaisa lage */
+  -webkit-backdrop-filter: blur(20px) !important;
+  backdrop-filter: blur(20px) !important;
+  
+  /* Halka sa top border chamak ke liye (Optional) */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4) !important;
+  z-index: 9999 !important;
   transition: all 0.3s ease-in-out !important;
 }
 
-/* Text visibility on hover */
-.tech-name {
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-  color: white;
-  margin-top: 10px;
-  text-align: center;
-  font-size: 1.1rem;
+/* Links ki visibility fix */
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500 !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
 }
 
-.tech-wrapper:hover .tech-name {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(5px);
-}
-
-.tech-wrapper:hover .tech-icons {
-  transform: scale(1.05);
-  border-color: #cd5ff8 !important;
-}
-
-/* Purana sara scroll wala code hata dena pehle */
-html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  /* Native scrolling use karo, force smooth mat karo agar lag ho raha hai */
-  overflow-x: hidden;
-}
-
-/* Cursor ko cutne se bachane ke liye */
-.App {
-  position: relative;
-  min-height: 100vh;
-}
-/* Isse browser ko pata chalta hai ki content niche hai, pehle mat load karo */
-.project-card-view, .resume {
-  content-visibility: auto;
-  contain-intrinsic-size: 500px;
-}
-
-/* App.css - Clean & Adaptive Version */
-
-.App {
-  text-align: center;
-  position: relative;
-  min-height: 100vh;
-}
-
-/* Glassmorphism Fix */
-.project-card-view, .tech-icons, .sticky {
+/* --- 2. Card & Icons (Glassmorphism without Inversion) --- */
+.project-card-view, .tech-icons {
   background: rgba(255, 255, 255, 0.05) !important;
-  -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
-  backdrop-filter: blur(15px) saturate(180%) brightness(1.2) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
-  border-radius: 18px !important;
-  transition: all 0.4s ease-in-out !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 15px !important;
+  transition: 0.3s ease !important;
 }
 
-/* SMART TEXT: White background (Resume) pe Black aur Dark pe White apne aap hoga */
+/* --- 3. Text Visibility (No More Blending Mess) --- */
 .project-card-view h1, 
 .project-card-view p, 
 .project-card-view .card-text,
 .tech-name,
-.quote-card-view p,
-.about-activity,
 .resume-section h1,
 .resume-section h2,
-.resume-section .purple {
-  mix-blend-mode: difference !important; /* Jadu: Color invert kar deta hai */
-  color: #ffffff !important; 
-  position: relative;
-  z-index: 5;
+.resume-section .purple,
+.resume-section li {
+  mix-blend-mode: normal !important; /* Jadu band, normal color chalu */
+  color: white !important; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important; /* Text ko har jagah highlight karega */
 }
 
-/* Resume PDF Container */
+/* --- 4. Resume Page Fix --- */
+.resume-section {
+  /* Piche ka background wahi rahega jo baaki pages ka hai */
+  background-image: var(--section-background-color) !important;
+}
+
 .resume {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-  filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.5)) !important;
+  /* PDF ke piche bas halka sa dark tint taaki white PDF aur page alag dikhe */
+  background: rgba(0, 0, 0, 0.2) !important;
+  padding: 20px !important;
+  border-radius: 10px;
+  justify-content: center !important;
 }
 
 .download-btn {
   background-color: #623686 !important;
-  z-index: 10 !important;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.3) !important;
+  border: none !important;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4) !important;
 }
