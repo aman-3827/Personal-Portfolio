@@ -1,17 +1,10 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
-import { DiMongodb, DiNodejs } from "react-icons/di";
+// Sirf wahi icons import kiye hain jo niche use ho rahe hain
 import {
   SiGitlab,
   SiVisualstudiocode,
-  SiReact,
-  SiAngular,
-  SiNpm,
   SiGithub,
-  SiNodedotjs,
-  SiExpress,
-  SiFigma,
   SiAtom,
   SiGit,
 } from "react-icons/si";
@@ -19,35 +12,46 @@ import {
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGithub />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        < SiGitlab/>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
-      </Col>
-      {/* <Col xs={4} md={2} className="tech-icons">
-        <SiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAngular />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col> */}
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAtom />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGit />
-      </Col>
       
-      
+      {/* GitHub */}
+      <Col xs={4} md={2} className="tech-wrapper">
+        <div className="tech-icons">
+          <SiGithub />
+        </div>
+        <span className="tech-name">GitHub</span>
+      </Col>
+
+      {/* GitLab */}
+      <Col xs={4} md={2} className="tech-wrapper">
+        <div className="tech-icons">
+          <SiGitlab />
+        </div>
+        <span className="tech-name">GitLab</span>
+      </Col>
+
+      {/* VS Code */}
+      <Col xs={4} md={2} className="tech-wrapper">
+        <div className="tech-icons">
+          <SiVisualstudiocode />
+        </div>
+        <span className="tech-name">VS Code</span>
+      </Col>
+
+      {/* Atom */}
+      <Col xs={4} md={2} className="tech-wrapper">
+        <div className="tech-icons">
+          <SiAtom />
+        </div>
+        <span className="tech-name">Atom</span>
+      </Col>
+
+      {/* Git */}
+      <Col xs={4} md={2} className="tech-wrapper">
+        <div className="tech-icons">
+          <SiGit />
+        </div>
+        <span className="tech-name">Git</span>
+      </Col>
       
     </Row>
   );

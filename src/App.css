@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+/* Box ko safe rakhne ke liye base style */
+.tech-icons {
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  transition: all 0.3s ease-in-out !important;
+  /* Agar purana box style chahiye toh border/padding yahan rehne dena */
+}
+
+/* Text ko shuru mein hide karne ke liye */
+.tech-name {
+  display: block; /* Isse text niche hi rahega */
+  opacity: 0;     /* Shuru mein gayab */
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Jab wrapper (Col) pe hover ho, tab text dikhe */
+.tech-wrapper:hover .tech-name {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(5px); /* Thoda niche slide hone ka effect */
+}
+
+/* Hover pe icon ko thoda highlight karne ke liye (Optional) */
+.tech-wrapper:hover .tech-icons {
+  transform: scale(1.05);
+  border-color: #cd5ff8 !important; /* Agar border hai toh uska color change hoga */
+}
