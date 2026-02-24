@@ -6,6 +6,7 @@ import logo from "../Assets/new_original1.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
+import { HashLink } from "react-router-hash-link";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -84,8 +85,9 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="/Contact"
+                as={HashLink}
+                smooth
+                to="/contact" // Ye pehle page pe jayega fir 'contact' ID dhundega
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineDesktop style={{ marginBottom: "2px" }} /> Contact

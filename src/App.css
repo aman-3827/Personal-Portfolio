@@ -79,3 +79,56 @@ html, body {
   position: relative;
   min-height: 100vh;
 }
+/* Isse browser ko pata chalta hai ki content niche hai, pehle mat load karo */
+.project-card-view, .resume {
+  content-visibility: auto;
+  contain-intrinsic-size: 500px;
+}
+
+/* App.css - Clean & Adaptive Version */
+
+.App {
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Glassmorphism Fix */
+.project-card-view, .tech-icons, .sticky {
+  background: rgba(255, 255, 255, 0.05) !important;
+  -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
+  backdrop-filter: blur(15px) saturate(180%) brightness(1.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 18px !important;
+  transition: all 0.4s ease-in-out !important;
+}
+
+/* SMART TEXT: White background (Resume) pe Black aur Dark pe White apne aap hoga */
+.project-card-view h1, 
+.project-card-view p, 
+.project-card-view .card-text,
+.tech-name,
+.quote-card-view p,
+.about-activity,
+.resume-section h1,
+.resume-section h2,
+.resume-section .purple {
+  mix-blend-mode: difference !important; /* Jadu: Color invert kar deta hai */
+  color: #ffffff !important; 
+  position: relative;
+  z-index: 5;
+}
+
+/* Resume PDF Container */
+.resume {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.5)) !important;
+}
+
+.download-btn {
+  background-color: #623686 !important;
+  z-index: 10 !important;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3) !important;
+}

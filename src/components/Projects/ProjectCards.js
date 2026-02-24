@@ -8,6 +8,7 @@ function ProjectCards(props) {
   return (
     <Card className="project-card-view" style={{ width: "900px", maxWidth: "100%" }}>
       <Card.Img 
+        loading="lazy"
         variant="top" 
         src={props.imgPath} 
         alt="card-img" 
