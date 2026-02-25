@@ -19,6 +19,7 @@ function CustomCursor() {
       }}
       clickables={['a', 'button', '.link', '.tech-icons', '.nav-link']}
     />
+
   );
 }
 
