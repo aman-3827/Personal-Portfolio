@@ -552,20 +552,28 @@ button:focus {
   background-image: var(--section-background-color) !important;
   color: white !important;
 }
-
 .tech-icons {
   font-size: 4.5em !important;
-  margin: 15px !important;
+  /* Margin auto se box khud center hoga, 15px se aapas ki doori */
+  margin: 15px !important; 
   padding: 10px !important;
   opacity: 0.93 !important;
   border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
-  vertical-align: middle !important;
-  text-align: center !important;
   border-radius: 5px !important;
-  display: table !important;
+  
+  /* Flexbox is best for centering */
+  display: flex !important;
+  justify-content: center !important; 
+  align-items: center !important;
+  
+  /* Fixed size ensures alignment doesn't break */
+  width: 150px !important; 
+  height: 120px !important;
+  
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
+  background-color: transparent !important;
 }
 
 @media (max-width: 767px) {
@@ -575,9 +583,11 @@ button:focus {
 }
 
 .tech-icons:hover {
+  /* Scale ke saath alignment stable rakhne ke liye */
   transform: scale(1.05) !important;
-  overflow: hidden !important;
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  background-color: rgba(197, 115, 230, 0.1) !important; /* Thoda highlight effect */
+  outline: none !important;
 }
 .tech-icon-images {
   padding: 20px !important;
@@ -826,3 +836,5 @@ button:focus {
     cursor: none !important;
   }
 }
+
+
