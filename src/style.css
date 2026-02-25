@@ -783,3 +783,34 @@ button:focus {
     font-size: 1.8rem;
   }
 }
+
+/* Cursor Remove on mobile
+/* Sabse pehle desktop pe cursor dikhao (default) */
+.custom-cursor, 
+#custom-cursor, 
+.cursor-dot, 
+.cursor-outline {
+    display: block;
+}
+
+/* Ab Mobile aur Tablet ke liye (Media Query) */
+@media (max-width: 991px) {
+    .custom-cursor, 
+    #custom-cursor, 
+    .cursor-dot, 
+    .cursor-outline {
+        display: none !important; /* Forcefully hide */
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* Default cursor ko wapas laane ke liye */
+    body, html {
+        cursor: auto !important;
+    }
+    
+    * {
+        cursor: auto !important;
+    }
+}
