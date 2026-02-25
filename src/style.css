@@ -814,3 +814,15 @@ button:focus {
         cursor: auto !important;
     }
 }
+
+/* Desktop screen pe default cursor ko gayab karne ke liye */
+@media (min-width: 992px) {
+  html, body {
+    cursor: none !important;
+  }
+
+  /* Saare links aur buttons pe bhi default cursor hide karo */
+  a, button, .nav-link, .tech-icons {
+    cursor: none !important;
+  }
+}
