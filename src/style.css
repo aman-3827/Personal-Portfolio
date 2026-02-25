@@ -838,3 +838,41 @@ button:focus {
 }
 
 
+/* Sabse pehle Desktop ke liye (992px se upar) */
+@media (min-width: 992px) {
+  .tech-icons {
+    font-size: 4.5em !important;
+    margin: 15px !important;
+    padding: 10px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 180px !important; /* Desktop pe thode bade */
+    height: 140px !important;
+    transition: all 0.4s ease !important;
+  }
+}
+
+/* Mobile aur Tablet ke liye (991px se niche) */
+@media (max-width: 991px) {
+  .tech-icons {
+    font-size: 3em !important; /* Chota font mobile ke liye */
+    margin: 10px !important;   /* Thodi kam space */
+    padding: 8px !important;
+    
+    /* Box size chota karo taaki screen pe fit aaye */
+    width: 100px !important; 
+    height: 90px !important;
+    
+    display: inline-flex !important; /* Mobile pe flex wrap ko support karega */
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  /* Icons ke parent container ko wrap karna zaroori hai */
+  .tech-icons-container { 
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+}
