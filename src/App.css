@@ -1,37 +1,25 @@
-/* App.css - Clean & Stable Version */
-
 .App {
   text-align: center;
   position: relative;
   min-height: 100vh;
 }
 
-/* --- 1. Navbar Fix (Dark & Premium) --- */
-/* --- Navbar Fix: Perfect Glassy Balance --- */
 .navbar, .sticky {
-  /* 0.7 opacity se piche ka purple background halka dikhega */
   background-color: rgba(10, 4, 22, 0.7) !important; 
-  
-  /* Blur ko 15px se 20px kiya taaki piche ka content "frosted glass" jaisa lage */
   -webkit-backdrop-filter: blur(20px) !important;
   backdrop-filter: blur(20px) !important;
-  
-  /* Halka sa top border chamak ke liye (Optional) */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-  
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4) !important;
   z-index: 9999 !important;
   transition: all 0.3s ease-in-out !important;
 }
 
-/* Links ki visibility fix */
 .navbar-nav .nav-link {
   color: white !important;
   font-weight: 500 !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* --- 2. Card & Icons (Glassmorphism without Inversion) --- */
 .project-card-view, .tech-icons {
   background: rgba(255, 255, 255, 0.05) !important;
   backdrop-filter: blur(10px) !important;
@@ -41,7 +29,6 @@
   transition: 0.3s ease !important;
 }
 
-/* --- 3. Text Visibility (No More Blending Mess) --- */
 .project-card-view h1, 
 .project-card-view p, 
 .project-card-view .card-text,
@@ -50,22 +37,20 @@
 .resume-section h2,
 .resume-section .purple,
 .resume-section li {
-  mix-blend-mode: normal !important; /* Jadu band, normal color chalu */
+  mix-blend-mode: normal !important;
   color: white !important; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important; /* Text ko har jagah highlight karega */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* --- 4. Resume Page Fix --- */
 .resume-section {
-  /* Piche ka background wahi rahega jo baaki pages ka hai */
   background-image: var(--section-background-color) !important;
 }
 
 .resume {
-  /* PDF ke piche bas halka sa dark tint taaki white PDF aur page alag dikhe */
   background: rgba(0, 0, 0, 0.2) !important;
   padding: 20px !important;
   border-radius: 10px;
+  display: flex !important;
   justify-content: center !important;
 }
 

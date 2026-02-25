@@ -87,7 +87,7 @@ function NavBar() {
               <Nav.Link
                 as={HashLink}
                 smooth
-                to="/contact" // Ye pehle page pe jayega fir 'contact' ID dhundega
+                to="/contact" 
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineDesktop style={{ marginBottom: "2px" }} /> Contact

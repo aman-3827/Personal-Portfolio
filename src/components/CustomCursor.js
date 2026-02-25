@@ -5,17 +5,17 @@ function CustomCursor() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Mobile check function
+    
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 991);
     };
 
-    handleResize(); // Check on load
+    handleResize(); 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Agar mobile hai toh kuch bhi mat dikhao
+
   if (isMobile) return null;
 
   return (
@@ -25,7 +25,7 @@ function CustomCursor() {
       innerScale={1}
       trailingSpeed={12}
       hasBlendMode={false}
-      showSystemCursor={true} // Mobile/Tablet ke liye important
+      showSystemCursor={true} 
       innerStyle={{
         clipPath: 'polygon(0% 0%, 0% 100%, 30% 70%, 60% 70%, 0% 0%)',
         backgroundColor: '#C0C0C0',

@@ -8,7 +8,7 @@ function Type() {
         strings: [
           "Web Developer",
           // "WordPress Developer",
-          // "Web Designer",
+          "Web Designer",
         ],
         autoStart: true,
         loop: true,

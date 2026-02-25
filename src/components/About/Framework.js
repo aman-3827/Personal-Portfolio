@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-// Sirf wahi icons jo niche use ho rahe hain
 import {
   SiReact,
   SiNodedotjs,

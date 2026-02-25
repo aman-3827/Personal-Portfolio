@@ -1,12 +1,12 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-// Safe and stable imports
+
 import { 
   SiGitlab, 
   SiGithub, 
   SiGit,
 } from "react-icons/si";
-import { VscVscode } from "react-icons/vsc"; // VS Code ke liye sabse best aur error-free icon
+import { VscVscode } from "react-icons/vsc"; 
 
 function Toolstack() {
   return (
