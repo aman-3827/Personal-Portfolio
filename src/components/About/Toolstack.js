@@ -25,7 +25,7 @@ function Toolstack() {
         </div>
         <span className="tech-name">GitLab</span>
       </Col>
-
+ 
       <Col xs={4} md={2} className="tech-wrapper">
         <div className="tech-icons">
           <VscVscode />

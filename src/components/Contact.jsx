@@ -16,8 +16,8 @@ function Contact() {
 
     emailjs
       .send(
-        "service_ih8axqf",
-        "template_0yoki5s",
+        "service_ivg3h8p",
+        "template_qbxp02d",
         {
           yourname,
           email,
